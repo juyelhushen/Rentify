@@ -16,6 +16,7 @@ Rentify is a web application designed to streamline property rental management. 
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
+- [See It Live](#see-it-live)
 
 ## Features
 
@@ -125,6 +126,10 @@ Contributions are what make the open-source community such an amazing place to l
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## See It Live
+
+Check out the live version of Rentify at [rentifydevdev.netlify.com](https://rentifydevdev.netlify.com).
 
 ---
 
