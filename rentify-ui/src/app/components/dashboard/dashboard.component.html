@@ -1,0 +1,53 @@
+<app-header />
+<mat-drawer-container class="w-[100%] h-[90%] bg-gray-900">
+  <mat-drawer class="shadow-2xl shadow-red-950 m-5" mode="side" opened>
+    <mat-label class="flex items-center gap-2 text-2xl bg-purple-900 text-white">
+        <mat-icon>dashboard</mat-icon> Dashboard
+    </mat-label>
+    <mat-nav-list role="list" class="">
+      <mat-list-item role="listitem" routerLink='liked' routerLinkActive>
+        <mat-icon
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matListItemIcon
+          >favorite</mat-icon
+        >
+        <span
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matLine
+          >Liked Property</span
+        >
+      </mat-list-item>
+      <mat-divider class="bg-gray-700" />
+      <mat-list-item *ngIf="isLandlord" role="listitem" routerLink='property' routerLinkActive>
+        <mat-icon
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matListItemIcon
+          >store</mat-icon
+        >
+        <span
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matLine
+          >Property</span
+        >
+      </mat-list-item>
+      <mat-divider class="bg-gray-700" />
+      <mat-list-item *ngIf="isLandlord" role="listitem" routerLink='upload' routerLinkActive>
+        <mat-icon
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matListItemIcon
+          >cloud_upload</mat-icon
+        >
+        <span
+          class="text-black hover:text-purple-900 ease-out duration-100 transition-all"
+          matLine
+          >Post Property</span
+        >
+      </mat-list-item>
+      <mat-divider class="bg-gray-700" />
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-divider class="bg-red-800 my-2" role="separator" [vertical]="true" />
+  <mat-drawer-content class="p-10">
+    <router-outlet />
+  </mat-drawer-content>
+</mat-drawer-container>

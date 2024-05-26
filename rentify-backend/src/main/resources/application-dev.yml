@@ -1,0 +1,51 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://presidiodb.cd8ek2aasikq.ap-south-1.rds.amazonaws.com:3306/rentify
+    username: username
+    password: password
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hushenjuyel@gmail.com
+    password: lrwn shju zcnp nsmv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+
+
+#Secret Key
+Secret:
+  key: <SecretKey>
+
+#AWS properties
+aws:
+  accessKey: <AccesKey>
+  secretKey: <Secret>
+  region: ap-south-1
+
+  s3:
+    bucket:
+      name: rentify-in-bucket
+      url: https://rentify-in-bucket.s3.ap-south-1.amazonaws.com
+
+

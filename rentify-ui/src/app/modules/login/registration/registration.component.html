@@ -1,0 +1,109 @@
+<main class="h-full">
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          class="mx-auto h-10 w-auto"
+          src="../../../../assets/logo/Rentify.png"
+          alt="Your Company"
+        />
+        <h2
+          class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+        >
+          Create an Account
+        </h2>
+      </div>
+  
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-1" [formGroup]="signupform">
+          <mat-form-field appearence="fill">
+            <mat-label for="firstname">Firstname</mat-label>
+            <input
+              matInput
+              id="firstname"
+              name="firstname"
+              type="text"
+              formControlName="firstname"
+            />
+            @if('signupForm.controls.firstname.touched && signupForm.controls.firstname.invalid') {
+            <mat-error>This field is mandatory.</mat-error>
+            }
+          </mat-form-field>
+  
+          <mat-form-field appearence="fill">
+            <mat-label for="lastname">Lastname</mat-label>
+            <input
+              matInput
+              id="lastname"
+              name="lastname"
+              type="text"
+              formControlName="lastname"
+            />
+            @if('signupForm.controls.lastname.touched && signupForm.controls.lastname.invalid') {
+              <mat-error>This field is mandatory.</mat-error>
+              }
+          </mat-form-field>
+  
+          <mat-form-field appearence="fill">
+            <mat-label for="email">Email address</mat-label>
+            <input matInput formControlName="email" id="email" name="email" type="email" required >
+            @if('signupForm.controls.email.touched && signupForm.controls.email.invalid') {
+            <mat-error>This field is mandatory.</mat-error>
+            }
+          </mat-form-field>
+  
+          <mat-form-field appearence="fill">
+            <mat-label for="phonenumber">Phone number</mat-label>
+            <input
+              matInput
+              formControlName="phoneNumber"
+              id="phonenumber"
+              name="phonenumber"
+              type="phoneNumber"
+              maxlength="10"
+              minlength="10"
+            />
+            @if('signupForm.controls.phoneNumber.touched && signupForm.controls.phoneNumber.invalid') {
+              <mat-error>This field is mandatory.</mat-error>
+          }
+          </mat-form-field>
+  
+          <div class="flex gap-x-2 items-center">
+            <label for="role">Select your role</label>
+            <mat-radio-group formControlName='role'  aria-label="Select an option">
+              @for (role of roles; track $index) {
+              <mat-radio-button [value]="role">{{ role }}</mat-radio-button>
+              }
+            </mat-radio-group>
+          </div>
+  
+          <mat-form-field>
+            <mat-label for="password">Password</mat-label>
+            <input
+              matInput
+              formControlName="password"
+              id="password"
+              name="password"
+              type="password"
+            />
+            @if('signupForm.controls.password.touched && signupForm.controls.password.invalid') 
+            { <mat-error>Please enter a valid password.</mat-error>   }
+            <mat-hint>hint : Password must be min. 6 digit.</mat-hint>
+          </mat-form-field>
+  
+          <div>
+            <button
+              mat-raised-button
+              type="submit"
+              class="w-full"
+              color="primary"
+              (click)="doSignup()"
+              [disabled]="signupform.invalid"
+            >
+              Signup
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  

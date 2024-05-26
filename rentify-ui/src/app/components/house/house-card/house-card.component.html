@@ -1,0 +1,41 @@
+<div class="grid grid-cols-3 p-3 gap-3">
+    <div
+      class="banner row-span-3"
+      [ngStyle]="{ 'background-image': 'url(' + houseList.imageUrl + ')' }"
+    ></div>
+    <div class="col-span-2 row-span-3 flex flex-col gap-2">
+      <div class="flex items-center gap-x-2">
+        <span class="text-3xl font-medium tracking-widest">{{
+          houseList.type
+        }}</span>
+        <span class="text-gray-700"> :- {{ houseList.place }}</span>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center justify-start">
+          <span class="flex-1 p-1 flex border-s">
+            <p class="font-medium">No of BedRooms</p>
+            <p> : {{ houseList.numberOfBedrooms }}</p>
+          </span>
+          <span class="flex-1 p-1 flex border-s">
+            <p class="font-medium">No of BathRooms</p>
+            <p> : {{ houseList.numberOfBathrooms }}</p>
+          </span>
+        </div>
+        <div class="flex">
+          <span class="flex-1 p-1 flex border-s">
+            <p class="font-medium">Near by Hospital</p>
+            <p> : {{ houseList.nearbyHospitals }}</p>
+          </span>
+          <span class="flex-1 p-1 flex border-s">
+            <p class="font-medium">Near by Collage</p>
+            <p> : {{ houseList.nearbyColleges }}</p>
+          </span>
+        </div>
+      </div>
+      <div class="flex gap-3 items-center">
+        <button mat-raised-button color="primary" class="flex-1" (click)="onClickOnInterest()">I'm Interested</button>
+        <button mat-icon-button class="thumbs" (click)="doLike()">{{houseList.likes}} <mat-icon>thumb_up</mat-icon></button>     
+      </div>
+    </div>
+  </div>
+  

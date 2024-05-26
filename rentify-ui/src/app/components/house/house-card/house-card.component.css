@@ -1,0 +1,10 @@
+.banner {
+    background-size: cover;
+  }
+  
+  .thumbs {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 3px;
+  }

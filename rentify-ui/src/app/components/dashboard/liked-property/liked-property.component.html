@@ -1,0 +1,23 @@
+<div
+      class="w-auto h-auto flex flex-col relative gap-10 col-span-3 overflow-y-auto p-5"
+    >
+      <div class="" *ngIf="propertyList.length === 0">
+        You did not like any proeprty
+      </div>
+
+      <ng-container
+        *ngFor="let item of propertyList | slice : start : end"
+      >
+        <app-house-card
+          class="w-[100%] shadow-2xl shadow-blue-900"
+          [houseList]="item"
+        />
+      </ng-container>
+
+      <mat-paginator
+        class="shadow-2xl w-full shadow-black"
+        [length]="propertyList.length"
+        (page)="onPageChange($event)"
+        pageSize="3"
+      ></mat-paginator>
+    </div>

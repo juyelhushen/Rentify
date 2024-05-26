@@ -1,0 +1,44 @@
+<Section >
+    <h2>Uploard your poperty here</h2>
+
+    <form (ngSubmit)="onSubmit()" class="flex gap-2 flex-col">
+      <div class="flex flex-row justify-between">
+        <div class="flex space-x-1 items-center">
+          <label for="">Type</label>
+          <input type="text" [(ngModel)]="propertyRequest.type" name="type" placeholder="Type" required>
+        </div>
+
+        <div class="flex space-x-1 items-center">
+          <label for="">Place</label>
+          <input type="text" [(ngModel)]="propertyRequest.place" name="place" placeholder="Place" required>
+
+        </div>
+
+        <div class="flex space-x-1 items-center">
+          <label for="">Area</label>
+          <input type="text" [(ngModel)]="propertyRequest.area" name="area" placeholder="Area" required>
+        </div>
+      </div>
+      
+      <div class="flex  gap-6">
+        <div class="flex space-x-1 items-center">
+          <label for="">No Of BedRooms</label>
+          <input type="number" [(ngModel)]="propertyRequest.numberOfBedrooms" name="numberOfBedrooms" placeholder="Bedrooms" required>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <label for="">No Of Bathrooms</label>
+        <input type="number" [(ngModel)]="propertyRequest.numberOfBathrooms" name="numberOfBathrooms" placeholder="Bathrooms" required>
+  
+        </div>
+      </div>
+      <input type="text" [(ngModel)]="propertyRequest.nearbyHospitals" name="nearbyHospitals" placeholder="Hospitals" required>
+      <input type="text" [(ngModel)]="propertyRequest.nearbyColleges" name="nearbyColleges" placeholder="Colleges" required>
+      <input type="file" (change)="onFileSelected($event)" required>
+      <div class="flex gap-2">
+        <button mat-raised-button color="primary" type="submit">Submit</button> 
+        <button mat-stroked-button color="primary" (click)="resetForm()">Reset</button>
+      </div>
+
+    </form>
+
+</Section>

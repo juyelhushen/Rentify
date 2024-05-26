@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <span class="flex items-center ">
+      @if(isMobile) {
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+  
+      } @else {
+      <h3 class="text-white">Rentify</h3>
+
+      <div class="hidden ml-10 lg:flex lg:gap-x-12">
+        <a class="text-sm font-semibold leading-6 cursor-pointer text-white hover:text-red-800 ease-in  duration-300  transition-all" routerLink='/house'>Explore Houses</a>
+        <a class="text-sm font-semibold leading-6 cursor-pointer text-white hover:text-red-800 ease-in  duration-300  transition-all" (click)="navigateToDashboard()">Dashboard</a>
+      </div>
+      }
+    </span>
+    <span class="spacer"></span>
+  
+    @if(isLoggedin) {
+      <span class="grid grid-cols-3 place-items-center">
+        <h5 class="col-span-2 text-white">Username</h5>
+        <img [matMenuTriggerFor]="beforeMenu" class="col-span-1 h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" loading="lazy" alt="">
+      </span>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button  mat-menu-item (click)="doLogout()"><mat-icon>exit_to_app</mat-icon>Logout</button>
+      </mat-menu>
+    } @else {
+    <span class="flex items-center space-x-4">
+      <a
+        routerLink="/user/login"
+        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        aria-current="page"
+        >Login</a
+      >
+      <a
+        routerLink="/user/registration"
+        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        >Signup</a
+      >
+    </span>
+    }
+  </mat-toolbar>
+  

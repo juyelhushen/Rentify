@@ -1,0 +1,62 @@
+<main class="h-full">
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          class="mx-auto h-10 w-auto"
+          src="../../../assets/logo/Rentify.png"
+          alt="Your Company"
+        />
+        <h2
+          class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+        >
+          Sign in to your account
+        </h2>
+      </div>
+  
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-6" [formGroup]="loginForm">
+          <mat-form-field appearance="fill">
+            <mat-label for="email">Email address</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+            @if('loginForm.controls.email.touched && loginForm.controls.email.invalid') {
+              <mat-error>it it mandatory to be filled </mat-error>
+            }
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label for="password">Password</mat-label>
+            <input
+              matInput
+              formControlName="password"
+              id="password"
+              name="password"
+              type="password"
+              required
+            />
+            @if('loginForm.controls.password.touched && loginForm.controls..invalid') {
+                 <mat-error>it mandatory to filled it.</mat-error>
+            }
+            <mat-hint>hint: password should be min. 6 digit</mat-hint>
+          </mat-form-field>
+  
+          <div>
+            <button type="submit" class="w-full" color='primary' mat-raised-button [disabled]="loginForm.invalid" (click)="doLogin()" >Login</button>
+          </div>
+        </form>
+        <div class="mt-1 signup-link">
+          <span>Don't have an account</span>
+          <a class="font-bold" routerLink="/registration">Signup here!</a>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  
