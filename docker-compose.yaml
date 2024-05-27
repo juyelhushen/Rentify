@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./rentify-backend
+    container_name: rentify-backend-container
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://presidiodb.cd8ek2aasikq.ap-south-1.rds.amazonaws.com:3306/rentify
+      SPRING_DATASOURCE_USERNAME: username
+      SPRING_DATASOURCE_PASSWORD: password
+
+  frontend:
+    build: ./rentify-ui
+    container_name: angular-app
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,26 @@
+2024-05-27 18:35:34,307 INFO  [main] com.presidio.rentify.RentifyBackendApplication : Starting RentifyBackendApplication using Java 17.0.9 with PID 5684 (D:\obs\Rentify\rentify-backend\target\classes started by user in D:\obs\Rentify)
+2024-05-27 18:35:34,311 INFO  [main] com.presidio.rentify.RentifyBackendApplication : The following 1 profile is active: "dev"
+2024-05-27 18:35:37,489 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-27 18:35:38,124 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 563 ms. Found 2 JPA repository interfaces.
+2024-05-27 18:35:39,489 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 8081 (http)
+2024-05-27 18:35:39,518 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2024-05-27 18:35:39,519 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-27 18:35:39,667 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2024-05-27 18:35:39,668 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5215 ms
+2024-05-27 18:35:39,972 INFO  [main] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 18:35:40,163 INFO  [main] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-27 18:35:40,270 INFO  [main] org.hibernate.cache.internal.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2024-05-27 18:35:40,870 INFO  [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-27 18:35:40,939 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2024-05-27 18:35:44,003 INFO  [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@681d704e
+2024-05-27 18:35:44,017 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2024-05-27 18:35:46,313 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-27 18:35:49,234 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 18:35:49,937 INFO  [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-27 18:35:51,354 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 18:35:51,835 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76e5278a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70cc0601, org.springframework.security.web.context.SecurityContextHolderFilter@631990cc, org.springframework.security.web.header.HeaderWriterFilter@26df4e2f, org.springframework.web.filter.CorsFilter@4b27a3fc, org.springframework.security.web.authentication.logout.LogoutFilter@72788282, com.presidio.rentify.jwt.AuthFilter@1de6689c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3310bb28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22eccd2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22b0fe7e, org.springframework.security.web.session.SessionManagementFilter@cf9a1f1, org.springframework.security.web.access.ExceptionTranslationFilter@f25176a, org.springframework.security.web.access.intercept.AuthorizationFilter@6f6d2847]
+2024-05-27 18:35:52,360 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port 8081 (http) with context path ''
+2024-05-27 18:35:52,375 INFO  [main] com.presidio.rentify.RentifyBackendApplication : Started RentifyBackendApplication in 19.612 seconds (process running for 22.84)
+2024-05-27 19:18:40,645 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 19:18:40,746 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2024-05-27 19:18:41,269 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
