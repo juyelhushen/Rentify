@@ -1,11 +1,14 @@
-ARG APP_NAME="rentify"
-ARG APP_VERSION="0.0.1"
-ARG JAR_FILE="./target/${APP_NAME}.jar"
-
+# Use a base image with JDK
 FROM openjdk:17-alpine
-EXPOSE 5000
 
-COPY ${JAR_FILE} app.jar
-LABEL authors="Juyel"
+# Add a volume to store logs
+VOLUME /tmp
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Copy the JAR file from the target directory to the container
+COPY target/rentify.jar rentify.jar
+
+# Expose the port the app runs on
+EXPOSE 8081
+
+# Run the JAR file
+ENTRYPOINT ["java", "-jar", "/rentify.jar"]
