@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://presidiodb.cd8ek2aasikq.ap-south-1.rds.amazonaws.com:3306/rentify
-    username: username
-    password: password
+    url: jdbc:mysql://roundhouse.proxy.rlwy.net:59144/railway
+    username: root
+    password: QdcvoKhoFAFzmeOTXtOAbwsZhEXiwwgf
 
   jpa:
     show-sql: true
@@ -22,7 +22,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: hushenjuyel@gmail.com
-    password: lrwn shju zcnp nsmv
+    password: <PASSWORD>
     properties:
       mail:
         smtp:
@@ -39,8 +39,8 @@ Secret:
 
 #AWS properties
 aws:
-  accessKey: <AccesKey>
-  secretKey: <Secret>
+  accessKey: <AWS_ACCESS_KEY>
+  secretKey: <AWS_SECRET_KEY>
   region: ap-south-1
 
   s3:
