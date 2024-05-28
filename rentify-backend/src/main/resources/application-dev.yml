@@ -18,11 +18,11 @@ spring:
         jdbc:
           time_zone: UTC
 
- mail:
+  mail:
     host: smtp.gmail.com
     port: 587
     username: hushenjuyel@gmail.com
-    password: lrwn shju zcnp nsmv
+    password:
     properties:
       mail:
         smtp:
@@ -33,18 +33,17 @@ spring:
 
 
 
-#Secret Key
-Secret:
-  key: "fkgnkvbkdfgrthgsfvfghjgnfdhguigndfjvkndffdkngdfkj"
+  #Secret Key
+  Secret:
+    key: "fkgnkvbkdfgrthgsfvfghjgnfdhguigndfjvkndffdkngdfkj"
 
-#AWS properties
-aws:
-  accessKey: AKIARV3CMNE6SZY2OMYX
-  secretKey: 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
-  region: ap-south-1
+  #AWS properties
+  aws:
+    accessKey:
+    secretKey:
+    region: ap-south-1
 
-  s3:
-    bucket:
-      name: rentify-in-bucket
-      url: https://rentify-in-bucket.s3.ap-south-1.amazonaws.com
-
+    s3:
+      bucket:
+        name: rentify-in-bucket
+        url: https://rentify-in-bucket.s3.ap-south-1.amazonaws.com
