@@ -20,6 +20,7 @@ import java.util.Set;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "https://master--rentifydev.netlify.app")
 @RequestMapping("/api/property")
 @RequiredArgsConstructor
 public class PropertyController {

@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
+@CrossOrigin(origins = "https://master--rentifydev.netlify.app")
 @RequiredArgsConstructor
 public class UserController {
 
