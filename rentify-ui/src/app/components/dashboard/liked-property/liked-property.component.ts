@@ -1,16 +1,17 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { PropertyService } from '../../../services/property.service';
-import { UserService } from '../../../services/user.service';
+import { Component, ViewChild } from '@angular/core';
 import { PropertyReponse } from '../../../models/model';
 import { MatPaginator } from '@angular/material/paginator';
-import { ActivatedRoute, Params } from '@angular/router';
+import { PropertyService } from '../../../services/property.service';
+import { UserService } from '../../../services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-liked-property',
   templateUrl: './liked-property.component.html',
-  styleUrl: './liked-property.component.css',
+  styleUrl: './liked-property.component.css'
 })
-export class LikedPropertyComponent implements OnInit {
+export class LikedPropertyComponent {
+
   propertyList: PropertyReponse[] = [];
   userId: number | null = null;
 

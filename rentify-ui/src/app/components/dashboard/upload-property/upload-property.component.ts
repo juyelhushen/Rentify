@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Property } from '../../../models/model';
 import { PropertyService } from '../../../services/property.service';
 import { UserService } from '../../../services/user.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-upload-property',
@@ -10,7 +9,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './upload-property.component.css',
 })
 export class UploadPropertyComponent {
-  
   propertyRequest: Property = {
     type: '',
     place: '',
@@ -32,7 +30,6 @@ export class UploadPropertyComponent {
     this.selectedFile = event.target.files[0];
   }
 
-
   onSubmit(): void {
     const userid = this.userService.currentUserId;
 
@@ -42,7 +39,6 @@ export class UploadPropertyComponent {
         next: (res) => {
           console.log(res);
           this.resetForm();
-
         },
         error: (err) => {
           console.log(err);
@@ -60,5 +56,5 @@ export class UploadPropertyComponent {
       nearbyHospitals: '',
       nearbyColleges: '',
     };
-  }
+  };
 }

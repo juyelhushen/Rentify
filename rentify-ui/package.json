@@ -5,10 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod":"ng build --configuration=production",
+    "build:prod": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:rentify-ui": "node dist/rentify-ui/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -21,11 +20,9 @@
     "@angular/material": "^17.3.10",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
-    "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
-    "@angular/ssr": "^17.0.9",
     "@auth0/angular-jwt": "^5.2.0",
-    "express": "^4.18.2",
+    "@tailwindcss/forms": "^0.5.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -34,10 +31,7 @@
     "@angular-devkit/build-angular": "^17.0.9",
     "@angular/cli": "^17.0.9",
     "@angular/compiler-cli": "^17.0.0",
-    "@tailwindcss/forms": "^0.5.7",
-    "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
-    "@types/node": "^18.18.0",
     "autoprefixer": "^10.4.19",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",

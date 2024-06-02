@@ -1,16 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
-import { Mail, PropertyReponse, User } from '../../models/model';
+import { Mail, PropertyReponse } from '../../models/model';
+import { MatPaginator } from '@angular/material/paginator';
 import { PropertyService } from '../../services/property.service';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SellerDetailsComponent } from './seller-details/seller-details.component';
-import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-house',
   templateUrl: './house.component.html',
-  styleUrl: './house.component.css',
+  styleUrl: './house.component.css'
 })
 export class HouseComponent {
   houseList: PropertyReponse[] = [];

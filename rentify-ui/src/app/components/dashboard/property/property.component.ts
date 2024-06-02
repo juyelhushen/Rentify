@@ -56,7 +56,5 @@ export class PropertyComponent {
         console.log(err);
       },
     });
-  };
-
-  
+  }
 }

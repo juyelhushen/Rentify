@@ -1,22 +1,23 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row fxLayout="row" fxLayoutGap="gappx">
-    <span>Seller Details</span>
-    <span class="spacer"></span>
-    <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-<mat-dialog-content>
-  <ng-container>
-    <p>Name: {{ dialogData.fullname }}</p>
-    <p>Email: {{ dialogData.email }}</p>
-    <p>Mobile No: {{ dialogData.phonenumber }}</p>
-  </ng-container>
-</mat-dialog-content>
-
-<mat-dialog-actions >
-  <p class="font-medium text-green-900">A email has been sent to your mail please check!</p>
-  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-</mat-dialog-actions>
+    <mat-toolbar-row fxLayout="row" fxLayoutGap="gappx">
+      <span>Seller Details</span>
+      <span class="spacer"></span>
+      <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <mat-dialog-content>
+    <ng-container>
+      <p>Name: {{ dialogData.fullname }}</p>
+      <p>Email: {{ dialogData.email }}</p>
+      <p>Mobile No: {{ dialogData.phonenumber }}</p>
+    </ng-container>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions >
+    <p class="font-medium text-green-900">A email has been sent to your mail please check!</p>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+  

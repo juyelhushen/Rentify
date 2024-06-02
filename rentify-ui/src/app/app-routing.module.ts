@@ -41,9 +41,8 @@ const routes: Routes = [
       import('./modules/login/login.module').then((mod) => mod.LoginModule),
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

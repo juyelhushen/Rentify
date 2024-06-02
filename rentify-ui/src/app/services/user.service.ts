@@ -1,10 +1,10 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { environment } from '../../env/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { AuthResponse, Login, Role, Signup, User } from '../models/model';
 import { Observable } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { environment } from '../../env/envirenment';
+import { AuthResponse, Login, Role, Signup, User } from '../models/model';
 
 @Injectable({
   providedIn: 'root',

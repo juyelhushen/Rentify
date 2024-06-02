@@ -1,14 +1,13 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { User } from '../../models/model';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 
@@ -56,5 +55,4 @@ export class HeaderComponent {
       alert('Please login first to see dashboard');
     }
   };
-
 }

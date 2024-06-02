@@ -38,20 +38,15 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "10mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -110,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "918a35fe-aaa8-4da5-ad15-f83afa927359"
+    "analytics": "7d3d219f-198d-4498-9fd0-a8088790d557"
   }
 }

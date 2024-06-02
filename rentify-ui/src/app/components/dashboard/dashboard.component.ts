@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { Role } from '../../models/model';
 import { ActivatedRoute } from '@angular/router';
+import { Role } from '../../models/model';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,6 +26,4 @@ export class DashboardComponent {
   if(Role.LANDLORD === role) this.isLandlord = true;
   }
 
-
-  
 }

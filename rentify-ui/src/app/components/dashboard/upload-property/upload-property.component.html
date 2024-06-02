@@ -2,30 +2,30 @@
     <h2>Uploard your poperty here</h2>
 
     <form (ngSubmit)="onSubmit()" class="flex gap-2 flex-col">
-      <div class="flex flex-row justify-between">
+      <div class="flex flex-row justify-between flex-wrap gap-2">
         <div class="flex space-x-1 items-center">
           <label for="">Type</label>
           <input type="text" [(ngModel)]="propertyRequest.type" name="type" placeholder="Type" required>
         </div>
 
-        <div class="flex space-x-1 items-center">
+        <div class="flex space-x-1 items-center  gap-2 flex-wrap">
           <label for="">Place</label>
           <input type="text" [(ngModel)]="propertyRequest.place" name="place" placeholder="Place" required>
 
         </div>
 
-        <div class="flex space-x-1 items-center">
+        <div class="flex space-x-1 items-center gap-2 flex-wrap">
           <label for="">Area</label>
           <input type="text" [(ngModel)]="propertyRequest.area" name="area" placeholder="Area" required>
         </div>
       </div>
       
-      <div class="flex  gap-6">
-        <div class="flex space-x-1 items-center">
+      <div class="flex  gap-6 flex-wrap">
+        <div class="flex space-x-1 items-center gap-2 flex-wrap">
           <label for="">No Of BedRooms</label>
           <input type="number" [(ngModel)]="propertyRequest.numberOfBedrooms" name="numberOfBedrooms" placeholder="Bedrooms" required>
         </div>
-        <div class="flex space-x-1 items-center">
+        <div class="flex space-x-1 items-center gap-2 flex-wrap">
           <label for="">No Of Bathrooms</label>
         <input type="number" [(ngModel)]="propertyRequest.numberOfBathrooms" name="numberOfBathrooms" placeholder="Bathrooms" required>
   

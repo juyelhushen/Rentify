@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PropertyReponse } from '../../../models/model';
-import { PropertyService } from '../../../services/property.service';
 
 @Component({
   selector: 'app-house-card',
   templateUrl: './house-card.component.html',
-  styleUrl: './house-card.component.css',
+  styleUrl: './house-card.component.css'
 })
 export class HouseCardComponent {
   @Input('houseList')
@@ -26,5 +25,4 @@ export class HouseCardComponent {
   onClickOnInterest = () => {
     this.interedClick.emit(this.houseList.userId);
   }
-
 }
