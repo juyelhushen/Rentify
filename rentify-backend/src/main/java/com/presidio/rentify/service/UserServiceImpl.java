@@ -123,6 +123,13 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new Exception("User not found with username : " + userDetails.getUsername()));
     }
 
+    @Override
+    public UserDetails getCurrentUser() throws Exception {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return userDetails;
+    }
+
 
     @Override
     public boolean ifLikedProperty(long propertyId) throws Exception {

@@ -42,6 +42,7 @@ public class JwtUtils {
     private String doGenerateToken(Map<String, Object> claims,
                                    String username,
                                    Role role) {
+
         return Jwts
                 .builder()
                 .claims(claims)
